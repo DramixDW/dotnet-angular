@@ -1,0 +1,20 @@
+<!-- Ici le titre passe par notre custom Pipe movieTitle pour subir des transformations -->
+<p>{{ title | movieTitle }}</p>
+
+<p>
+	<span>Montant : </span>
+	<span>{{ amount  | currency: 'CAD'}}</span>
+</p>
+<p>
+	<span>
+		date du jour:
+	</span>
+	<span>
+		{{ today | date: 'dd/MM/yyyy'}}
+	</span>
+</p>
+<p>
+	<span>Description :</span>
+<!-- Ici le titre passe par notre custom Pipe summary pour subir n'être affiché qu'en partie  -->
+	{{description | summary : 15: 25}}
+</p>

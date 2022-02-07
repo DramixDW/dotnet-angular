@@ -1,0 +1,9 @@
+<!-- Ici, la class favorite se rajoute à notre div si la variable isFavorite est à true -->
+<div [class.favorite]="isFavorite">
+	<span>
+		une super musique
+	</span>
+	<button (click)="toggleFavorite()">
+		mettre en favori
+	</button>
+</div>

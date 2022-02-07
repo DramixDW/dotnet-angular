@@ -1,0 +1,14 @@
+<!-- un attribut entouré de [] => la valeur de cette attribut est récupéré grâce au javascript. Ici, elle est égale à la variable imgUrl de la partie '.ts' de notre component -->
+<img [src]="imgUrl" alt="picsum" /> 
+<p [style.backgroundColor]="isActive ? 'blue' : 'red' " [class.camo]="isHidden" >
+	Un texte surement pas lisible
+</p>
+<div (click)="clickDiv()">
+	<button type='button' (click)="sayHello($event)">
+		Dire bonjour 
+	</button>
+<!-- 
+	[(ngModel)]="variable" est du two-way binding, donc la valeur initial de la variable est
+	la valeur initial de l'input et si l'input change de valeur, la variable aussi -->
+	<input #email [(ngModel)]="emailExample" (keyup)="onSave(email)" />
+</div>
