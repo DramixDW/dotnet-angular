@@ -1,0 +1,14 @@
+<div class="likeBox">
+	<span>
+		{{ nbrLike }}
+	</span>
+	<span>
+		likes
+	</span>
+	<span (click)="like()" [class.selected]="isLiked === true">
+		&uarr;
+	</span>
+	<span (click)="dislike()" [class.selected]="isLiked === false">
+		&darr;
+	</span>
+</div>

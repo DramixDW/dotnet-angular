@@ -1,0 +1,11 @@
+<div>
+	<div>
+		{{ title }}
+		<button type='button' (click)="toggleExpanded()">
+			Zip toggle
+		</button>
+	</div>
+	<div [class]="expanded ? 'expanded' : 'folded'" >
+		<ng-content></ng-content>
+	</div>
+</div>

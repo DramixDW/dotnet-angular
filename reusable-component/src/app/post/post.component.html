@@ -1,0 +1,12 @@
+<div>
+	<header class="headPost">
+		<h2>
+		Titre de mon poste
+		</h2>
+		<!-- $event en args => envoyer la donnée transmise par la fonction emit dans l'enfant -->
+		<app-like [nbr]="17" [liked]="false" (likeChanged)="updateLike($event, 6, 'banane')"></app-like>
+	</header>
+	<p>
+	Contenu de notre poste
+	</p>
+</div>

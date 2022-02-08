@@ -1,0 +1,11 @@
+.likeBox {
+	display: flex;
+	padding: 4px;
+}
+span {
+	padding: 4px;
+}
+
+.selected {
+	color: red;
+}
