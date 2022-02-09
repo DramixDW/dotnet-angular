@@ -1,0 +1,78 @@
+<!-- ngIf  -->
+
+<!-- <div *ngIf="isShown">
+    j'étais caché
+</div> -->
+
+<!-- <div *ngIf="title.length > 2">
+  {{title}}
+</div> -->
+
+<!-- le contenu de la div ne sera pas affiché
+avec then else, il affiche un template ou l'autre -->
+<div *ngIf="title.length > 2 then yesTitle else noTitle">
+    L'expression est vrai
+</div>
+<ng-template #yesTitle>
+   {{ title }}
+    le titre est assez long
+</ng-template>
+<ng-template #noTitle>
+    Le titre n'est pas assez long
+</ng-template>
+
+<div [hidden]="isShown">
+  caché
+</div>
+<div [hidden]="!isShown">
+  pas caché
+</div>
+
+<!--  SwitchCase -->
+<button type='button' (click)="viewMode = 'list'">
+  ListView
+</button>
+<button type='button' (click)="viewMode = 'grid'">
+  GridView
+</button>
+
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="viewModeList">
+    Affichage en liste
+  </div>
+  <div *ngSwitchCase="'grid'">
+    Affichage en grille
+  </div>
+  <div *ngSwitchDefault>
+    Problablement l'affichage en banane
+  </div>
+</div>
+
+<!-- ngFor -->
+
+<ul *ngFor="let course of courses; index as i">
+  <li [ngStyle]="{
+    'background-color': i === 0 ? 'green' : 'white',
+    'font-size': i === 1 ? '32px': '16px'
+  }"
+    [style.fontWeight]=" i === 2 ? 'bold' : 'normal'">
+    {{ i }} . {{ course }}
+  </li>
+</ul>
+
+<ul *ngFor="let course of courses; even as isEven">
+  <li [ngClass]="{
+    'even': isEven,
+    'odd': !isEven
+  }">
+    {{ course }}
+  </li>
+</ul>
+
+<button (click)="addCourse()">
+    Ajouter un cours
+</button>
+
+<button (click)="removeCourse()">
+    Supprimer un cours
+</button>
