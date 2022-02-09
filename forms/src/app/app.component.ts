@@ -51,3 +51,13 @@ export class AppComponent {
     this.startValue = '09:00';
   }
 }
+
+/*
+  Créer un formulaire 
+    créer un cours
+      - Intitulé du cours (longueur minimum de 10, requis)
+      - Description du cours (requis)
+      - Radio, 3 Catégories (develpment, art, sciences)
+  Bouton submit doit être désactivé si formulaire invalide
+  quand submit, ça nous affiche les valeurs du formulaires dans la page
+*/
