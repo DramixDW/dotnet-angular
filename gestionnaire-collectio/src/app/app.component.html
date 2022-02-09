@@ -1,0 +1,15 @@
+<button (click)="list='movies'" [disabled]="list == 'movies'">
+  Films
+</button>
+<button (click)="list='books'" [disabled]="list == 'books'">
+  Livres
+</button>
+<button (click)="list='wines'" [disabled]="list == 'wines'">
+  Vin
+</button>
+
+<div [ngSwitch]="list">
+  <app-movies *ngSwitchCase="'movies'"></app-movies>
+  <app-books *ngSwitchCase="'books'"></app-books>
+  <app-wines *ngSwitchCase="'wines'"></app-wines>
+</div>

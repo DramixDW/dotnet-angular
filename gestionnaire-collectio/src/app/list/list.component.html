@@ -1,0 +1,17 @@
+<div>
+	<h2>
+		{{ title }}
+	</h2>
+</div>
+<input #newElem type="text" (keyup.enter)="addElem(newElem)" />
+<div *ngIf="list.length === 0">
+	<ng-content select=".noElem"></ng-content>
+</div>
+<div *ngFor="let elem of list; index as i">
+	<p (click)="selectElem(i)" [class.selected]="selected === i">
+		{{elem}}
+	</p>
+</div>
+<button [disabled]="!(selected > -1)" (click)="deleteElem()">
+	Supprimer l'élément sélectionné
+</button>
