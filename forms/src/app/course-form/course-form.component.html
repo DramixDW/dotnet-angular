@@ -17,7 +17,7 @@
 	<div class="radio"  *ngFor="let category of categories">
 		<label>
 			{{ category.name }}
-			<input type="radio" name="category" [value]="category.id" [(ngModel)]="selectedCategory" >
+			<input type="radio" name="category" [value]="category.nbr" [(ngModel)]="selectedCategory" >
 		</label>
 	</div>
 	<button class="btn btn-primary" [disabled]="f.invalid">

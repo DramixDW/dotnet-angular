@@ -1,18 +1,24 @@
 import { AbstractControl, ValidationErrors } from "@angular/forms";
+import { BananeService } from "../banane.service";
 
 export class UsernameValidator {
-	// constructor(private movieService: MovieService) {}
+	constructor() {
+	}
 	// les fonctions de validateur sont toujours en static
 	// elle reçoivent toujours un AbstractControl en argument
 	// Renvoyer null s'il n'y a pas d'erreur
 	// Renvoyer un object s'il y en a une
-	static cannotContainSpace(control: AbstractControl) {
-		if (control.value.indexOf(' ') > -1) {
-			return { noSpacePlz: {
-				details: 'jghdjk'
-			} }
+	static cannotContainSpace() {
+		return(control: AbstractControl) => {
+			const bananaService = new BananeService();
+			bananaService.sayBananaPlz();
+			if (control.value.indexOf(' ') > -1) {
+				return { noSpacePlz: {
+					details: 'jghdjk'
+				} }
+			}
+			return null
 		}
-		return null
 	}
 
 	static shouldBeUnique(control: AbstractControl): Promise<ValidationErrors | null> {

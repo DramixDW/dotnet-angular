@@ -1,0 +1,6 @@
+<input #input type='text' (keyup.enter)="addTopic(input.value)" />
+
+<div *ngFor="let topic of Topics.controls">
+	{{ topic.value }}
+	{{ topic.valid }}
+</div>

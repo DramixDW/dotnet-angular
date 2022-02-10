@@ -11,13 +11,13 @@ export class CourseFormComponent implements OnInit {
   selectedCategory: number = 2;
   name = "cours de banane";
   categories = [{
-    id: 0,
+    nbr: 0,
     name: 'development'
   }, {
-    id: 1,
+    nbr: 2,
     name: 'art'
   }, {
-    id: 2,
+    nbr: 1,
     name: 'sciences'
   }]
   constructor() { }

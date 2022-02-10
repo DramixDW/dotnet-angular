@@ -12,7 +12,7 @@ export class SignupFormComponent implements OnInit {
      usernameControl: new FormControl('', [
        Validators.required,
        Validators.maxLength(15),
-       UsernameValidator.cannotContainSpace ],
+       UsernameValidator.cannotContainSpace() ],
        ),
      passwordControl: new FormControl()   
    })
@@ -46,6 +46,8 @@ export class SignupFormComponent implements OnInit {
   }
 
   submit() {
+    // ajout dynamique de validator 
+    // this.UsernameControl?.setValidators(Class.maFonctionDeValidation(this.UsernameControl.value))
     console.log(this.form);
   }
 
