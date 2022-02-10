@@ -19,6 +19,12 @@ export class AppComponent {
   removeCourse() {
     this.courses.pop()
   }
+
+  addElem() {
+    const div = document.createElement('div');
+    div.setAttribute('appFruit', 'banane');
+    document.getElementById('group')?.appendChild(div);
+  }
 }
 
 /* 
