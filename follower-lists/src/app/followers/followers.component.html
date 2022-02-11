@@ -1,0 +1,11 @@
+<div class="d-flex flex-wrap" *ngFor="let follower of followers">
+	<div class="card-body w-25 p-8">
+		<img src="{{follower.avatar_url}}" alt="la super photo de profil"/>
+		<p class="card-title">
+			{{ follower.login }}
+		</p>
+		<a class="card-text" [href]="follower.html_url">
+			Profil Github
+		</a>
+	</div>
+</div>
